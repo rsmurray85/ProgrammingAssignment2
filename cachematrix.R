@@ -10,17 +10,17 @@ set <- function( matrix ) {
             m <<- matrix
             i <<- NULL
     }
-    ## Method the get the matrix
+    ## Define the function
     get <- function() {
     	## Return the matrix
     	m
     }
-## Way to set the inverse of the matrix
+## Set the matrix Inverse
     setInverse <- function(inverse) {
         i <<- inverse
     }
 
-    ## Way to get the inverse of the matrix
+    ##  Get the matrix inverse
     getInverse <- function() {
         ## Back the inverse property
         i
@@ -30,7 +30,7 @@ set <- function( matrix ) {
          getInverse = getInverse)
 }
 ## Compute the inverse of the unique matrix back by "makeCacheMatrix"
-## Back to a matrix  “m”
+## Returned to the matrix  “m”
     m <- x$getInverse()
     if( !is.null(m) ) {
             message("getting cached data")
@@ -38,7 +38,7 @@ set <- function( matrix ) {
     }
     ## Compute the inverse 
     m <- solve(data) %*% data
-## Set the inverse to the object
+## Set the inverse
     x$setInverse(m)
 
     m
